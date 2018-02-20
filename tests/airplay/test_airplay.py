@@ -27,7 +27,7 @@ class AirPlayPlayerTest(AioHTTPTestCase):
 
     @asyncio.coroutine
     def get_application(self, loop=None):
-        self.fake_device = FakeAirPlayDevice(self.loop, self)
+        self.fake_device = FakeAirPlayDevice(self)
         self.usecase = AirPlayUseCases(self.fake_device)
         return self.fake_device
 

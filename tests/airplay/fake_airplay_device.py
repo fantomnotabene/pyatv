@@ -38,7 +38,7 @@ AirPlayPlaybackResponse = namedtuple('AirPlayPlaybackResponse', 'content')
 
 class FakeAirPlayDevice(web.Application):
 
-    def __init__(self, loop, testcase):
+    def __init__(self, testcase):
         super().__init__()
         self.responses = {}
         self.responses['airplay_playback'] = []
