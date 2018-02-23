@@ -101,9 +101,9 @@ class MrpRemoteControl(RemoteControl):
         """Go to main menu (long press menu)."""
         return self._press_key('top_menu')
 
-    async def suspend(self):
+    def suspend(self):
         """Suspend the device."""
-        self._press_key('suspend')
+        return self._press_key('suspend')
 
     def set_position(self, pos):
         """Seek in the current playing media."""
