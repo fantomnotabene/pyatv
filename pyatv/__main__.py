@@ -28,7 +28,6 @@ def _print_commands(title, api):
 async def _read_input(loop, prompt):
     sys.stdout.write(prompt)
     sys.stdout.flush()
-
     user_input = await loop.run_in_executor(None, sys.stdin.readline)
     return user_input.strip()
 
@@ -157,9 +156,9 @@ class DeviceCommands:
     async def pair(self):
         """Pair pyatv as a remote control with an Apple TV."""
         # Connect using the specified protocol
+        # TODO: config should be stored elsewhere so that API is same for both
         protocol = self.atv.service.protocol
         if protocol == const.PROTOCOL_DMAP:
-            self.atv.pairing.pin(self.args.pin_code)
             await self.atv.pairing.start(zeroconf=Zeroconf(),
                                          name=self.args.name,
                                          pairing_guid=self.args.pairing_guid)
@@ -171,6 +170,8 @@ class DeviceCommands:
             pin = await _read_input(self.loop, 'Enter PIN on screen: ')
             self.atv.pairing.pin(pin)
         else:
+            self.atv.pairing.pin(self.args.pin_code)
+
             print('Use {0} to pair with "{1}" (press ENTER to stop)'.format(
                 self.args.pin_code, self.args.remote_name))
 

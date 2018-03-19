@@ -37,12 +37,21 @@ class PairingTest(asynctest.TestCase):
     async def tearDown(self):
         await self.pairing.stop()
 
-    async def _start(self, pin_code=PIN_CODE,
+    async def _start(self,
+                     pin_code=PIN_CODE,
                      pairing_guid=pairing.DEFAULT_PAIRING_GUID):
         await self.pairing.start(zeroconf=self.zeroconf,
                                  name=REMOTE_NAME,
                                  pairing_guid=pairing_guid)
         self.pairing.pin(pin_code)
+
+    async def test_error_response_if_pin_not_set(self):
+        await self.pairing.start(zeroconf=self.zeroconf,
+                                 name=REMOTE_NAME)
+
+        url = self._pairing_url(PAIRING_CODE)
+        _, status = await utils.simple_get(url, self.loop)
+        self.assertEqual(status, 500)
 
     async def test_zeroconf_service_published(self):
         await self._start()

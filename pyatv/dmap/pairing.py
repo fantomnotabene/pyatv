@@ -128,6 +128,9 @@ class DmapPairingHandler(PairingHandler):
 
     async def handle_request(self, request):
         """Respond to request if PIN is correct."""
+        if not self._pin_code:
+            return web.Response(status=500)
+
         service_name = request.rel_url.query['servicename']
         received_code = request.rel_url.query['pairingcode'].lower()
         _LOGGER.info('Got pairing request from %s with code %s',
