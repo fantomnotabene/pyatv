@@ -6,11 +6,11 @@ import hashlib
 
 from urllib.parse import urlparse
 
-from pyatv import (const, exceptions, convert)
-from pyatv.dmap import (pairing, parser, tags)
-from pyatv.dmap.daap import DaapRequester
-from pyatv.net import HttpSession
-from pyatv.interface import (AppleTV, RemoteControl, Metadata,
+from .. import (const, exceptions, convert)
+from . import (pairing, parser, tags)
+from .daap import DaapRequester
+from ..net import HttpSession
+from ..interface import (AppleTV, RemoteControl, Metadata,
                              Playing, PushUpdater)
 
 _LOGGER = logging.getLogger(__name__)

@@ -2,13 +2,13 @@
 
 import logging
 
-from pyatv import (const, exceptions)
-from pyatv.mrp import (messages, protobuf)
-from pyatv.mrp.srp import SRPAuthHandler
-from pyatv.mrp.connection import MrpConnection
-from pyatv.mrp.protocol import MrpProtocol
-from pyatv.mrp.pairing import MrpPairingProcedure
-from pyatv.interface import (AppleTV, RemoteControl, Metadata,
+from .. import (const, exceptions)
+from . import (messages, protobuf)
+from .srp import SRPAuthHandler
+from .connection import MrpConnection
+from .protocol import MrpProtocol
+from .pairing import MrpPairingProcedure
+from ..interface import (AppleTV, RemoteControl, Metadata,
                              Playing, PushUpdater, PairingHandler)
 
 

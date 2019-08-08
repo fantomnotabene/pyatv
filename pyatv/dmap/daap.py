@@ -6,8 +6,8 @@ import logging
 from copy import copy
 
 
-from pyatv import exceptions
-from pyatv.dmap import parser
+from .. import exceptions
+from . import parser
 from .tag_definitions import lookup_tag
 
 _LOGGER = logging.getLogger(__name__)

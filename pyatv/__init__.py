@@ -9,14 +9,14 @@ from threading import Lock
 from zeroconf import ServiceBrowser, Zeroconf
 from aiohttp import ClientSession
 
-from pyatv import (conf, exceptions)
-from pyatv.airplay import player
-from pyatv.airplay.api import AirPlayAPI
-from pyatv.const import (PROTOCOL_MRP, PROTOCOL_DMAP)
-from pyatv.net import HttpSession
+from . import (conf, exceptions)
+from .airplay import player
+from .airplay.api import AirPlayAPI
+from .const import (PROTOCOL_MRP, PROTOCOL_DMAP)
+from .net import HttpSession
 
-from pyatv.dmap import DmapAppleTV
-from pyatv.mrp import MrpAppleTV
+from .dmap import DmapAppleTV
+from .mrp import MrpAppleTV
 
 _LOGGER = logging.getLogger(__name__)
 

@@ -13,7 +13,7 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
-from pyatv.mrp.protobuf import TextInputTraitsMessage_pb2 as pyatv_dot_mrp_dot_protobuf_dot_TextInputTraitsMessage__pb2
+from . import TextInputTraitsMessage_pb2 as pyatv_dot_mrp_dot_protobuf_dot_TextInputTraitsMessage__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

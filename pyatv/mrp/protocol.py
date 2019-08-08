@@ -6,9 +6,9 @@ import logging
 
 from collections import namedtuple
 
-from pyatv.mrp import (messages, protobuf)
-from pyatv.mrp.pairing import MrpPairingVerifier
-from pyatv.mrp.srp import Credentials
+from . import (messages, protobuf)
+from .pairing import MrpPairingVerifier
+from .srp import Credentials
 
 _LOGGER = logging.getLogger(__name__)
 

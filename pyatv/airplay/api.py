@@ -3,10 +3,10 @@
 import logging
 import binascii
 
-from pyatv.interface import AirPlay
+from ..interface import AirPlay
 
-from pyatv.airplay.srp import (SRPAuthHandler, new_credentials)
-from pyatv.airplay.auth import (AuthenticationVerifier, DeviceAuthenticator)
+from .srp import (SRPAuthHandler, new_credentials)
+from .auth import (AuthenticationVerifier, DeviceAuthenticator)
 
 _LOGGER = logging.getLogger(__name__)
 

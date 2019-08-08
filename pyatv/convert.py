@@ -1,6 +1,6 @@
 """Various types of extraction and conversion functions."""
 
-from pyatv import (const, exceptions)
+from . import (const, exceptions)
 
 
 def media_kind(kind):

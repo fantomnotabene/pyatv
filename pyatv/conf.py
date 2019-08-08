@@ -1,7 +1,7 @@
 """Configuration when connecting to an Apple TV."""
 
-from pyatv import convert
-from pyatv.const import (PROTOCOL_MRP, PROTOCOL_DMAP, PROTOCOL_AIRPLAY)
+from . import convert
+from .const import (PROTOCOL_MRP, PROTOCOL_DMAP, PROTOCOL_AIRPLAY)
 
 _SUPPORTED_PROTOCOLS = [PROTOCOL_MRP, PROTOCOL_DMAP]
 

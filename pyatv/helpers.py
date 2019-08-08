@@ -1,7 +1,7 @@
 """Various helper methods."""
 
 import asyncio
-import pyatv
+from . import (scan_for_apple_tvs, connect_to_apple_tv)
 
 
 def auto_connect(handler, timeout=5, not_found=None, event_loop=None):
@@ -19,12 +19,12 @@ def auto_connect(handler, timeout=5, not_found=None, event_loop=None):
     # A coroutine is used so we can connect to the device while being inside
     # the event loop
     async def _handle(loop):
-        atvs = await pyatv.scan_for_apple_tvs(
+        atvs = await scan_for_apple_tvs(
             loop, timeout=timeout, abort_on_found=True)
 
         # Take the first device found
         if atvs:
-            atv = pyatv.connect_to_apple_tv(atvs[0], loop)
+            atv = connect_to_apple_tv(atvs[0], loop)
             try:
                 await handler(atv)
             finally:

@@ -5,7 +5,7 @@ import plistlib
 import logging
 
 from copy import copy
-from pyatv.exceptions import DeviceAuthenticationError
+from ..exceptions import DeviceAuthenticationError
 
 _LOGGER = logging.getLogger(__name__)
 

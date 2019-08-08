@@ -3,51 +3,51 @@
 THIS CODE IS AUTO-GENERATED - DO NOT EDIT!!!
 """
 
-from pyatv.mrp.protobuf.ProtocolMessage_pb2 import ProtocolMessage
+from .ProtocolMessage_pb2 import ProtocolMessage
 
 
-from pyatv.mrp.protobuf import SetStateMessage_pb2
-from pyatv.mrp.protobuf import SetArtworkMessage_pb2
-from pyatv.mrp.protobuf import RegisterHIDDeviceMessage_pb2
-from pyatv.mrp.protobuf import RegisterHIDDeviceResultMessage_pb2
-from pyatv.mrp.protobuf import SendHIDEventMessage_pb2
-from pyatv.mrp.protobuf import NotificationMessage_pb2
-from pyatv.mrp.protobuf import DeviceInfoMessage_pb2
-from pyatv.mrp.protobuf import ClientUpdatesConfigMessage_pb2
-from pyatv.mrp.protobuf import VolumeControlAvailabilityMessage_pb2
-from pyatv.mrp.protobuf import RegisterForGameControllerEventsMessage_pb2
-from pyatv.mrp.protobuf import KeyboardMessage_pb2
-from pyatv.mrp.protobuf import GetKeyboardSessionMessage_pb2
-from pyatv.mrp.protobuf import RegisterVoiceInputDeviceMessage_pb2
-from pyatv.mrp.protobuf import RegisterVoiceInputDeviceResponseMessage_pb2
-from pyatv.mrp.protobuf import TransactionMessage_pb2
-from pyatv.mrp.protobuf import CryptoPairingMessage_pb2
-from pyatv.mrp.protobuf import SetConnectionStateMessage_pb2
-from pyatv.mrp.protobuf import SetHiliteModeMessage_pb2
-from pyatv.mrp.protobuf import WakeDeviceMessage_pb2
-from pyatv.mrp.protobuf import SendPackedVirtualTouchEventMessage_pb2
+from . import SetStateMessage_pb2
+from . import SetArtworkMessage_pb2
+from . import RegisterHIDDeviceMessage_pb2
+from . import RegisterHIDDeviceResultMessage_pb2
+from . import SendHIDEventMessage_pb2
+from . import NotificationMessage_pb2
+from . import DeviceInfoMessage_pb2
+from . import ClientUpdatesConfigMessage_pb2
+from . import VolumeControlAvailabilityMessage_pb2
+from . import RegisterForGameControllerEventsMessage_pb2
+from . import KeyboardMessage_pb2
+from . import GetKeyboardSessionMessage_pb2
+from . import RegisterVoiceInputDeviceMessage_pb2
+from . import RegisterVoiceInputDeviceResponseMessage_pb2
+from . import TransactionMessage_pb2
+from . import CryptoPairingMessage_pb2
+from . import SetConnectionStateMessage_pb2
+from . import SetHiliteModeMessage_pb2
+from . import WakeDeviceMessage_pb2
+from . import SendPackedVirtualTouchEventMessage_pb2
 
 
-from pyatv.mrp.protobuf.SetStateMessage_pb2 import SetStateMessage
-from pyatv.mrp.protobuf.SetArtworkMessage_pb2 import SetArtworkMessage
-from pyatv.mrp.protobuf.RegisterHIDDeviceMessage_pb2 import RegisterHIDDeviceMessage
-from pyatv.mrp.protobuf.RegisterHIDDeviceResultMessage_pb2 import RegisterHIDDeviceResultMessage
-from pyatv.mrp.protobuf.SendHIDEventMessage_pb2 import SendHIDEventMessage
-from pyatv.mrp.protobuf.NotificationMessage_pb2 import NotificationMessage
-from pyatv.mrp.protobuf.DeviceInfoMessage_pb2 import DeviceInfoMessage
-from pyatv.mrp.protobuf.ClientUpdatesConfigMessage_pb2 import ClientUpdatesConfigMessage
-from pyatv.mrp.protobuf.VolumeControlAvailabilityMessage_pb2 import VolumeControlAvailabilityMessage
-from pyatv.mrp.protobuf.RegisterForGameControllerEventsMessage_pb2 import RegisterForGameControllerEventsMessage
-from pyatv.mrp.protobuf.KeyboardMessage_pb2 import KeyboardMessage
-from pyatv.mrp.protobuf.GetKeyboardSessionMessage_pb2 import GetKeyboardSessionMessage
-from pyatv.mrp.protobuf.RegisterVoiceInputDeviceMessage_pb2 import RegisterVoiceInputDeviceMessage
-from pyatv.mrp.protobuf.RegisterVoiceInputDeviceResponseMessage_pb2 import RegisterVoiceInputDeviceResponseMessage
-from pyatv.mrp.protobuf.TransactionMessage_pb2 import TransactionMessage
-from pyatv.mrp.protobuf.CryptoPairingMessage_pb2 import CryptoPairingMessage
-from pyatv.mrp.protobuf.SetConnectionStateMessage_pb2 import SetConnectionStateMessage
-from pyatv.mrp.protobuf.SetHiliteModeMessage_pb2 import SetHiliteModeMessage
-from pyatv.mrp.protobuf.WakeDeviceMessage_pb2 import WakeDeviceMessage
-from pyatv.mrp.protobuf.SendPackedVirtualTouchEventMessage_pb2 import SendPackedVirtualTouchEventMessage
+from .SetStateMessage_pb2 import SetStateMessage
+from .SetArtworkMessage_pb2 import SetArtworkMessage
+from .RegisterHIDDeviceMessage_pb2 import RegisterHIDDeviceMessage
+from .RegisterHIDDeviceResultMessage_pb2 import RegisterHIDDeviceResultMessage
+from .SendHIDEventMessage_pb2 import SendHIDEventMessage
+from .NotificationMessage_pb2 import NotificationMessage
+from .DeviceInfoMessage_pb2 import DeviceInfoMessage
+from .ClientUpdatesConfigMessage_pb2 import ClientUpdatesConfigMessage
+from .VolumeControlAvailabilityMessage_pb2 import VolumeControlAvailabilityMessage
+from .RegisterForGameControllerEventsMessage_pb2 import RegisterForGameControllerEventsMessage
+from .KeyboardMessage_pb2 import KeyboardMessage
+from .GetKeyboardSessionMessage_pb2 import GetKeyboardSessionMessage
+from .RegisterVoiceInputDeviceMessage_pb2 import RegisterVoiceInputDeviceMessage
+from .RegisterVoiceInputDeviceResponseMessage_pb2 import RegisterVoiceInputDeviceResponseMessage
+from .TransactionMessage_pb2 import TransactionMessage
+from .CryptoPairingMessage_pb2 import CryptoPairingMessage
+from .SetConnectionStateMessage_pb2 import SetConnectionStateMessage
+from .SetHiliteModeMessage_pb2 import SetHiliteModeMessage
+from .WakeDeviceMessage_pb2 import WakeDeviceMessage
+from .SendPackedVirtualTouchEventMessage_pb2 import SendPackedVirtualTouchEventMessage
 
 
 _EXTENSION_LOOKUP = {

@@ -2,8 +2,8 @@
 
 import binascii
 
-from pyatv.mrp import protobuf
-from pyatv.mrp import tlv8
+from . import protobuf
+from . import tlv8
 
 
 def create(message_type, priority=0):

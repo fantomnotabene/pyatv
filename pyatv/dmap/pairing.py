@@ -11,8 +11,8 @@ from aiohttp import web
 from zeroconf import ServiceInfo
 import netifaces
 
-from pyatv.dmap import tags
-from pyatv.interface import PairingHandler
+from . import tags
+from ..interface import PairingHandler
 
 _LOGGER = logging.getLogger(__name__)
 

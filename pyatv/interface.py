@@ -6,7 +6,7 @@ import hashlib
 
 from abc import (ABCMeta, abstractmethod, abstractproperty)
 
-from pyatv import (convert, exceptions)
+from . import (convert, exceptions)
 
 
 # TODO: make these methods more pretty and safe

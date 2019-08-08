@@ -10,12 +10,11 @@ import argparse
 from argparse import ArgumentTypeError
 from zeroconf import Zeroconf
 
-import pyatv
-from pyatv import (const, exceptions, interface)
-from pyatv.conf import (AppleTV, DmapService, MrpService)
-from pyatv.dmap import tag_definitions
-from pyatv.dmap.parser import pprint
-from pyatv.interface import retrieve_commands
+from . import (const, exceptions, interface, scan_for_apple_tvs, connect_to_apple_tv)
+from .conf import (AppleTV, DmapService, MrpService)
+from .dmap import tag_definitions
+from .dmap.parser import pprint
+from .interface import retrieve_commands
 
 
 def _print_commands(title, api):
@@ -79,7 +78,7 @@ class GlobalCommands:
 
     async def scan(self):
         """Scan for Apple TVs on the network."""
-        atvs = await pyatv.scan_for_apple_tvs(
+        atvs = await scan_for_apple_tvs(
             self.loop, timeout=self.args.scan_timeout, only_usable=False)
         _print_found_apple_tvs(atvs)
 
@@ -332,7 +331,7 @@ def _print_found_apple_tvs(atvs, outstream=sys.stdout):
 
 
 async def _autodiscover_device(args, loop):
-    atvs = await pyatv.scan_for_apple_tvs(
+    atvs = await scan_for_apple_tvs(
         loop, timeout=args.scan_timeout, abort_on_found=True,
         device_ip=args.address, protocol=args.protocol, only_usable=True)
     if not atvs:
@@ -389,7 +388,7 @@ async def _handle_commands(args, loop):
         details.add_service(MrpService(
             args.port, device_credentials=args.device_credentials))
 
-    atv = pyatv.connect_to_apple_tv(details, loop, protocol=args.protocol)
+    atv = connect_to_apple_tv(details, loop, protocol=args.protocol)
     atv.push_updater.listener = PushListener()
 
     try:
